@@ -1,0 +1,13 @@
+version: "3.1"
+
+services:
+  jupyter:
+    image: mvp-jupyter
+    build: .
+    environment:
+      JUPYTER_ENABLE_LAB: "yes"
+    volumes:
+      - ../:/home/jovyan/work
+    ports:
+      - '8888:8888'
+
